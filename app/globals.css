@@ -14,6 +14,33 @@
     }
   }
 
+/* ===== Custom Scrollbar ===== */
+/* For Chrome, Safari, Edge */
 ::-webkit-scrollbar {
-  display: none;
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb (scrollbar handle) color */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* "auto" | "thin" | "none" */
+    scrollbar-color: #888 #f1f1f1; /* thumb and track */
+}
+
+/* Ensure scrolling works */
+html, body {
+    overflow-y: auto; /* Show scrollbar only when needed */
 }
